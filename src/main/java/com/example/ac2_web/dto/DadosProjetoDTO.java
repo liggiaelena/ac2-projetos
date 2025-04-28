@@ -9,7 +9,7 @@ public class DadosProjetoDTO {
     private String nome;
     private LocalDate dataInicio;
     private LocalDate dataFim;
-    private List<String> funcionarios; // Apenas os nomes dos funcionários
+    private List<String> funcionarios;
 
     public DadosProjetoDTO() {
     }
