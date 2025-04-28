@@ -6,7 +6,7 @@ public class DadosSetorDTO {
 
     private Integer id;
     private String nome;
-    private List<String> funcionarios; // Nomes apenas
+    private List<String> funcionarios;
 
     public DadosSetorDTO() {
     }
