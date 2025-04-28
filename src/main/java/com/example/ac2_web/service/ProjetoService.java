@@ -13,6 +13,7 @@ import java.time.LocalDate;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.ArrayList;
 
 @Service
 public class ProjetoService {
@@ -40,11 +41,10 @@ public class ProjetoService {
         dto.setDataInicio(projeto.getDataInicio());
         dto.setDataFim(projeto.getDataFim());
 
-        List<String> nomes = projeto.getFuncionarios()
-                .stream()
-                .map(Funcionario::getNome)
-                .collect(Collectors.toList());
-
+        List<String> nomes = new ArrayList<>();
+        for (Funcionario f : projeto.getFuncionarios()) {
+            nomes.add(f.getNome());
+        }
         dto.setFuncionarios(nomes);
         return dto;
     }
